@@ -96,4 +96,5 @@ In the client folder, create a react application that connects to the API Server
 3. Redux for state management.
 
 
-Goodluck and if you have any questions please reachout to using the following email:
+Goodluck and if you have any questions please reach out to one of the following email:
+daniel.schmitt@musanga.com / mbmakayi@musanga.com
