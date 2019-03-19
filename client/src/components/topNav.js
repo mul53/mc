@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from '@mdi/react';
-import { mdiSearchWeb, mdiMagnify } from '@mdi/js';
+import { mdiMagnify } from '@mdi/js';
+import { NavLink } from 'react-router-dom';
 
 class TopNav extends Component {
   render() {
@@ -19,15 +20,15 @@ class TopNav extends Component {
         </div>
         <div className="top-nav__container">
           <nav className="top-nav__menu">
-            <a href="" className="top-nav__menu__item">
+            <NavLink className="top-nav__menu__item" to="/artists" activeClassName="top-nav__menu__item--active">
               artists
-            </a>
-            <a href="" className="top-nav__menu__item">
+            </NavLink>
+            <NavLink className="top-nav__menu__item" to="/albums" activeClassName="top-nav__menu__item--active">
               albums
-            </a>
-            <a href="" className="top-nav__menu__item">
+            </NavLink>
+            <NavLink className="top-nav__menu__item" to="/manage" activeClassName="top-nav__menu__item--active">
               manage
-            </a>
+            </NavLink>
           </nav>
         </div>
       </section>

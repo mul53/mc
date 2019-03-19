@@ -6,6 +6,7 @@ import {
   mdiAccount,
   mdiRadioTower
 } from '@mdi/js';
+import { Link } from 'react-router-dom';
 
 class LeftSidebar extends Component {
   render() {
@@ -28,13 +29,13 @@ class LeftSidebar extends Component {
         </div>
 
         <nav className="left-sidebar__menu">
-          <a href="" className="left-sidebar__menu__item">
+          <Link to="/artists" className="left-sidebar__menu__item">
             <Icon
               className="icon" 
               path={mdiPlayCircle}
               size={1.7} 
               color="white" /> Browse
-          </a>
+          </Link>
           <div href="" className="left-sidebar__menu__item left-sidebar__menu__item--disabled" disabled>
             <Icon
                 className="icon" 

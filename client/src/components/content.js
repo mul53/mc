@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
-import Card from './card';
+import { Switch, Route } from 'react-router-dom';
+
+import ArtistPage from './artistPage';
+import AlbumPage from './albumPage';
+import ManagePage from './managePage';
+
+function NoMatch({ location }) {
+  return (
+    <div>
+      <h3>
+        No match for <code>{location.pathname}</code>
+      </h3>
+    </div>
+  );
+}
 
 class Content extends Component {
   render() {
@@ -8,25 +22,12 @@ class Content extends Component {
         overflowY: 'auto',
         paddingTop: '30px'
       }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3">
-              <Card title="Views" subTitle="2013"/>
-            </div>
-            <div className="col-md-3">
-              <Card title="Views" subTitle="2013"/>
-            </div>
-            <div className="col-md-3">
-              <Card title="Views" subTitle="2013"/>
-            </div>
-            <div className="col-md-3">
-              <Card title="Views" subTitle="2013"/>
-            </div>
-            <div className="col-md-3">
-              <Card title="Views" subTitle="2013"/>
-            </div>
-          </div>
-        </div>
+        <Switch>
+          <Route path='/artists' component={ArtistPage} />
+          <Route path='/albums' component={AlbumPage} />
+          <Route path='/manage' component={ManagePage} />
+          <Route component={NoMatch} />
+        </Switch>
       </div>
     )
   }

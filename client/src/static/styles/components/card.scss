@@ -4,6 +4,7 @@
   margin-bottom: 30px;
   border-top-left-radius: $base-border-radius;
   border-top-right-radius: $base-border-radius;
+  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.5);
   
   &__bg {
     height: 160px;
@@ -25,6 +26,7 @@
 
     &__sub-title {
       font-size: 0.8125rem;
+      color: #8c8c8c;
     }
   }
 }

@@ -44,12 +44,13 @@
       color: #8c8c8c;
       text-transform: uppercase;
 
-      &:hover {
+      &:hover, &:focus, &--active {
         background: linear-gradient(#262626, #1f1f1f 50%);
         border-bottom: 2px solid #d32f2f;
         cursor: pointer;
         color: white;
         text-decoration: none;
+        outline: none;
       }
     }
   }
