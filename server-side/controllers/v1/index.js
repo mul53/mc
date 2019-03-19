@@ -1,4 +1,4 @@
-var ArtistCtrl = require('./artist');
+var ArtistCtrl = require('./artist.ctrl');
 
 module.exports = {
   ArtistCtrl,

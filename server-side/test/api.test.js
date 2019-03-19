@@ -5,7 +5,7 @@ var { expect } = chai;
 
 var app = require('../app');
 var ArtistFactory = require('./factories/artist.factory');
-var ArtistModel = require('../models/artist');
+var ArtistModel = require('../models/artist.model');
 
 mongoose.connect('mongodb://localhost/test');
 mongoose.connection

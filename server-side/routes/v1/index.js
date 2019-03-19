@@ -1,5 +1,5 @@
 var { Router} = require('express');
-var ArtistCtrl = require('../../controllers/v1/artist');
+var ArtistCtrl = require('../../controllers/v1/artist.ctrl');
 
 var routes = Router();
 

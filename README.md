@@ -64,16 +64,16 @@ Create an express JS server that stores information on artist and their albums. 
 
 | API                               | Description                                                  |
 | ---------------------------------- | ------------------------------------------------------------ |
-|/api/v1/artists/| return a list of all artists. |
-|/api/v1/albums/| return a list of all albums|
-|/api/v1/artists/search/[QUERY]| return a list of all artists fitting the query term |
-|/api/v1/albums/search/[QUERY]| return a list of all albums|
-|api/v1/album/create/|creates and stores an album in the mongodb database|
-|api/v1/artist/create/|creates and stores an artist in the mongodb database|
-|api/v1/album/delete/[ID]|deletes album in the mongodb database based on the id|
-|api/v1/artist/delete/[ID]|deletes artist in the mongodb database based on the id (including their albums)|
-|api/v1/album/update/[ID]|updates album in the mongodb database based on the id|
-|api/v1/artist/updates/[ID]|updates artist in the mongodb database based on the id|
+- [x] |/api/v1/artists/| return a list of all artists. |
+- [] |/api/v1/albums/| return a list of all albums|
+- [x] |/api/v1/artists/search/[QUERY]| return a list of all artists fitting the query term |
+- [] |/api/v1/albums/search/[QUERY]| return a list of all albums|
+- [] |api/v1/album/create/|creates and stores an album in the mongodb database|
+- [x] |api/v1/artist/create/|creates and stores an artist in the mongodb database|
+- [] |api/v1/album/delete/[ID]|deletes album in the mongodb database based on the id|
+- [x] |api/v1/artist/delete/[ID]|deletes artist in the mongodb database based on the id (including their albums)|
+- [] |api/v1/album/update/[ID]|updates album in the mongodb database based on the id|
+- [x] |api/v1/artist/updates/[ID]|updates artist in the mongodb database based on the id|
 
 To test these APIs we recommend using [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/)
 
