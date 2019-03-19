@@ -253,4 +253,53 @@ describe('api', function() {
       });
     });
   });
+
+  describe('GET /album/:id', function() {
+    before(function(done) {
+      AlbumModel.create(AlbumFactory).then(() => {
+        ArtistModel.create(ArtistFactory).then(() => done());
+      });
+    });
+
+    it('should return album which matches id with artist data and respond with 200', function(done) {
+      request(app)
+        .get(`/api/v1/album/${AlbumFactory._id}`)
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end(function(err, res) {
+          if (err) {
+            return done(err);
+          }
+
+          expect(res.body.title).to.eql(AlbumFactory.title);
+          expect(res.body.artist.name).to.eql(ArtistFactory.name);
+
+          return done();
+        });
+    });
+  });
+
+  describe('GET /artist/:id', function() {
+    before(function(done) {
+      ArtistModel.create(ArtistFactory).then(() => done());
+    });
+
+    it('should return artist which matches id and respond with 200', function(done) {
+      request(app)
+        .get(`/api/v1/artist/${ArtistFactory._id}`)
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end(function(err, res) {
+          if (err) {
+            return done(err);
+          }
+
+          expect(res.body.name).to.eql(ArtistFactory.name);
+
+          return done();
+        });
+    });
+  });
 });

@@ -12,6 +12,17 @@ var AlbumCtrl = {
     });
   },
 
+  Show: function(req, res) {
+    Album.findOne({ _id: req.params.id })
+      .populate('artist')
+      .exec(function(err, album) {
+        if (err) {
+          res.send(err);
+        }
+        res.status(200).json(album);
+      });
+  },
+
   New: function(req, res) {
     var album = new Album(req.body);
     album.save(function(err, persistedAlbum) {

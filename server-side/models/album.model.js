@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 var { model, Schema } = mongoose;
 
+mongoose.Promise = global.Promise;
+
 var AlbumSchema = Schema({
   title: {
     type: String,

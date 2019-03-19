@@ -11,6 +11,7 @@ routes.post('/artist/create', ArtistCtrl.New);
 routes.put('/artist/update/:id', ArtistCtrl.Update);
 routes.delete('/artist/delete/:id', ArtistCtrl.Delete);
 routes.get('/artists/search/:query', ArtistCtrl.Search);
+routes.get('/artist/:id', ArtistCtrl.Show);
 
 /* Album */
 routes.get('/albums', AlbumCtrl.Index);
@@ -18,5 +19,6 @@ routes.post('/album/create', AlbumCtrl.New);
 routes.put('/album/update/:id', AlbumCtrl.Update);
 routes.delete('/album/delete/:id', AlbumCtrl.Delete);
 routes.get('/albums/search/:query', AlbumCtrl.Search);
+routes.get('/album/:id', AlbumCtrl.Show);
 
 module.exports = routes;

@@ -8,7 +8,16 @@ var ArtistCtrl = {
       if (err) {
         res.send(err);
       }
-      res.json(artists);
+      res.status(200).json(artists);
+    });
+  },
+
+  Show: function(req, res) {
+    Artist.findOne({_id: req.params.id}, function(err, artist) {
+      if (err) {
+        res.send(err);
+      }
+      res.status(200).json(artist);
     });
   },
 

@@ -6,7 +6,7 @@
   "scripts": {
     "app:start": "nodemon",
     "app:lint": "eslint . --fix",
-    "app:test": "mocha",
+    "app:test": "mocha -timeout 10000",
     "app:db-reset": "./bin/db.reset"
   },
   "dependencies": {
