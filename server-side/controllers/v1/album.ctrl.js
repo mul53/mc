@@ -23,7 +23,7 @@ var AlbumCtrl = {
   },
 
   Update: function(req, res) {
-    Album.findOneAndUpdate(req.params.id, req.body, {new: true}, function(err, album) {
+    Album.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, album) {
       if (err) {
         res.send(err);
       }

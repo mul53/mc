@@ -8,7 +8,7 @@ var ArtistCtrl = {
       if (err) {
         res.send(err);
       }
-      res.json({ status: true, artists });
+      res.json(artists);
     });
   },
 
@@ -24,7 +24,7 @@ var ArtistCtrl = {
 
   Update: function(req, res) {
     var id = req.params.id;
-    Artist.findOneAndUpdate(id, req.body, {new: true}, function(err, artist) {
+    Artist.findOneAndUpdate({_id: id}, req.body, {new: true}, function(err, artist) {
       if (err) {
         res.send(err);
       }

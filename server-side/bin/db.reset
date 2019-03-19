@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var mongoose = require('mongoose');
+var chalk = require('chalk');
+var log = console.log;
+
+mongoose.connect('mongodb://localhost/test', {
+  useNewUrlParser: true,
+});
+
+mongoose.connection
+  .on('error', function(error) {
+    console.warn('Error : ', error);
+  });
+
+for (var collection in mongoose.connection.collections) {
+  mongoose.connection.collections[collection].remove(function() {});
+}
+
+mongoose.disconnect();
+
+log(chalk.cyan('Database has been successfully reset'));
+

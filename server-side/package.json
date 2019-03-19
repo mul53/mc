@@ -6,7 +6,8 @@
   "scripts": {
     "app:start": "nodemon",
     "app:lint": "eslint . --fix",
-    "app:test": "mocha -timeout 10000"
+    "app:test": "mocha",
+    "app:db-reset": "./bin/db.reset"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
