@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
+import LeftSidebar from './components/leftSidebar';
 
 class App extends Component {
   render() {
     return (
-      <h1>ReactJS Rocks</h1>
+      <div style={{ height: '100%' }}>
+        <LeftSidebar />
+      </div>
     )
   }
 }

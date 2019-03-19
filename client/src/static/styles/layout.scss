@@ -1,0 +1,16 @@
+html,body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+}
+
+body {
+  background-color: $dark-bg;
+  font-family: $base-font;
+  font-size: 0.875rem;
+}
+
+#root {
+  height: 100%;
+}

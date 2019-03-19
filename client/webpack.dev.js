@@ -34,6 +34,15 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.(scss|sass)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      },
+      {
         test: /\.(ttf)$/,
         use: {
           loader: 'url-loader',
