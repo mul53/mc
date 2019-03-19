@@ -93,25 +93,55 @@ describe('api', function() {
     });
 
     describe('DELETE /artist/delete/:id', function() {
-      before(function(done) {
-        ArtistModel.create(ArtistFactory).then(() => done());
+      describe('with albums', function() {
+        before(function(done) {
+          ArtistModel.create(ArtistFactory).then(() => {
+            AlbumModel.create(AlbumFactory).then(() => done());
+          });
+        });
+
+        it('should delete artist with albums and respond with 200', function(done) {
+          request(app)
+            .delete(`/api/v1/artist/delete/${ArtistFactory._id}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .end(async function(err, res) {
+              if (err) {
+                return done(err);
+              }
+
+              var albums = await AlbumModel.find({ artist: ArtistFactory._id });
+
+              expect(albums.length).to.eql(0);
+              expect(res.body.message).to.eql('Artist has been deleted successfully');
+
+              return done();
+            });
+        });
       });
 
-      it('should delete artist and respond with 200', function(done) {
-        request(app)
-          .delete(`/api/v1/artist/delete/${ArtistFactory._id}`)
-          .set('Accept', 'application/json')
-          .expect('Content-Type', /json/)
-          .expect(200)
-          .end(function(err, res) {
-            if (err) {
-              return done(err);
-            }
+      describe('without albums', function() {
+        before(function(done) {
+          ArtistModel.create(ArtistFactory).then(() => done());
+        });
 
-            expect(res.body.message).to.eql('Artist has been deleted successfully');
+        it('should delete artist and respond with 200', function(done) {
+          request(app)
+            .delete(`/api/v1/artist/delete/${ArtistFactory._id}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .end(function(err, res) {
+              if (err) {
+                return done(err);
+              }
 
-            return done();
-          });
+              expect(res.body.message).to.eql('Artist has been deleted successfully');
+
+              return done();
+            });
+        });
       });
     });
 

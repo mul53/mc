@@ -1,7 +1,8 @@
 var Artist = require('../../models/artist.model');
+var Album = require('../../models/album.model');
 
 // TODO: Api error handling
-
+// TODO: Use Async/Await
 var ArtistCtrl = {
   Index: function(req, res) {
     Artist.find({}, (err, artists) => {
@@ -46,7 +47,12 @@ var ArtistCtrl = {
       if (err) {
         res.send(err);
       }
-      res.status(200).json({ message: 'Artist has been deleted successfully'});
+      Album.deleteMany({ artist: req.params.id }, function(err) {
+        if (err) {
+          res.send(err);
+        }
+        res.status(200).json({ message: 'Artist has been deleted successfully'});
+      });
     });
   },
 

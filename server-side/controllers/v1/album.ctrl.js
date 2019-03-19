@@ -1,7 +1,7 @@
 var Album = require('../../models/album.model');
 
 // TODO: Api error handling
-
+// TODO: Use Async/Await
 var AlbumCtrl = {
   Index: function(req, res) {
     Album.find({}, function(err, albums) {
