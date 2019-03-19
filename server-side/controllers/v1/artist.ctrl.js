@@ -1,7 +1,7 @@
 var Artist = require('../../models/artist.model');
 var Album = require('../../models/album.model');
 
-// TODO: Api error handling
+// TODO: Improve api error handling
 // TODO: Use Async/Await
 var ArtistCtrl = {
   Index: function(req, res) {

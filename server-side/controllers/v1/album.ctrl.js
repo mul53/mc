@@ -1,6 +1,6 @@
 var Album = require('../../models/album.model');
 
-// TODO: Api error handling
+// TODO: Improve api error handling
 // TODO: Use Async/Await
 var AlbumCtrl = {
   Index: function(req, res) {
