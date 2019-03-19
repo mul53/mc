@@ -4,7 +4,10 @@ import Card from './card';
 class Content extends Component {
   render() {
     return (
-      <div>
+      <div style={{
+        overflowY: 'auto',
+        paddingTop: '30px'
+      }}>
         <div className="container">
           <div className="row">
             <div className="col-md-3">
