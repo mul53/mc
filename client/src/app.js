@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import LeftSidebar from './components/leftSidebar';
-import Main from './components/main';
+import LeftSidebar from './containers/leftSidebar';
+import Main from './containers/main';
 
 class App extends Component {
   render() {

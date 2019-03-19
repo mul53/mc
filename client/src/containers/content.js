@@ -23,6 +23,7 @@ class Content extends Component {
         paddingTop: '30px'
       }}>
         <Switch>
+          <Route path="/" exact component={ArtistPage} />
           <Route path='/artists' component={ArtistPage} />
           <Route path='/albums' component={AlbumPage} />
           <Route path='/manage' component={ManagePage} />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Card from './card';
+import Card from '../components/card';
 
 class AlbumPage extends Component {
   render() {

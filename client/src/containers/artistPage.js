@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Card from './card';
+import Card from '../components/card';
 
-class ManagePage extends Component {
+class ArtistPage extends Component {
   render() {
     return (
       <div className="container">
@@ -28,4 +28,4 @@ class ManagePage extends Component {
   }
 }
 
-export default ManagePage;
+export default ArtistPage;

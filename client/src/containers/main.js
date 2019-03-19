@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TopNav from './topNav';
+import TopNav from '../components/topNav';
 import Content from './content';
 
 class Main extends Component {
