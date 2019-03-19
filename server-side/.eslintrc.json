@@ -20,6 +20,7 @@
             "objects": "always-multiline"
         }],
         "curly":"error",
+        "semi": ["error", "always"],
         "block-spacing":"error",
         "comma-spacing":["error", { "before": false, "after": true }],
         "indent": ["error", 2],

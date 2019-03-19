@@ -5,6 +5,7 @@ var ArtistSchema = Schema({
   name: {
     type: String,
   },
+
   label: {
     type: String,
   },

@@ -1,7 +1,8 @@
 var Artist = require('../../models/artist.model');
 
-var ArtistCtrl = {
+// TODO: Api error handling
 
+var ArtistCtrl = {
   Index: function(req, res) {
     Artist.find({}, (err, artists) => {
       if (err) {
@@ -13,17 +14,17 @@ var ArtistCtrl = {
 
   New: function(req, res) {
     var artist = new Artist(req.body);
-    artist.save(function(err, artist) {
+    artist.save(function(err, persistedArtist) {
       if (err) {
         res.send(err);
       }
-      res.status(201).json(artist);
+      res.status(201).json(persistedArtist);
     });
   },
 
   Update: function(req, res) {
     var id = req.params.id;
-    Artist.findByIdAndUpdate(id, req.body, {new: true}, function(err, artist) {
+    Artist.findOneAndUpdate(id, req.body, {new: true}, function(err, artist) {
       if (err) {
         res.send(err);
       }
@@ -32,7 +33,7 @@ var ArtistCtrl = {
   },
 
   Delete: function(req, res) {
-    Artist.remove({_id: req.params.id}, function(err) {
+    Artist.deleteOne({_id: req.params.id}, function(err) {
       if (err) {
         res.send(err);
       }
@@ -50,6 +51,6 @@ var ArtistCtrl = {
       res.status(200).json(artists);
     });
   },
-}
+};
 
 module.exports = ArtistCtrl;
