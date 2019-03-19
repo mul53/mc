@@ -1,0 +1,30 @@
+.card {
+  margin: 0 auto;
+  width: 160px;
+  margin-bottom: 30px;
+  border-top-left-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+  
+  &__bg {
+    height: 160px;
+    background-color: $light-bg;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+  }
+
+  &__content {
+    padding: 12px;
+    background-color: $light-bg;
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
+
+    &__title {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    &__sub-title {
+      font-size: 0.8125rem;
+    }
+  }
+}
