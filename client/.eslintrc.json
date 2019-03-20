@@ -5,6 +5,22 @@
     "jest": true
   },
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-console":"off",
+    "comma-dangle": ["error", {
+        "objects": "always-multiline"
+    }],
+    "curly":"error",
+    "semi": ["error", "always"],
+    "block-spacing":"error",
+    "comma-spacing":["error", { "before": false, "after": true }],
+    "indent": ["error", 2],
+    "key-spacing": ["error", { "beforeColon": false,"mode": "strict"}],
+    "no-trailing-spaces":"error",
+    "padded-blocks":["error", "never"],
+    "space-before-blocks": "error",
+    "space-before-function-paren": ["error", "never"],
+    "space-in-parens": ["error", "never"],
+    "quotes": ["error", "single"]
   }
 }

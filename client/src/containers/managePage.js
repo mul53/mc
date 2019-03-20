@@ -1,28 +1,19 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
-import Card from '../components/card';
+import ManagePageMain from './managePageMain';
+import ManagePageArtist from './managePageArtist';
+import ManagePageArtistEdit from './managePageArtistEdit';
+import ManagePageArtistAdd from './managePageArtistAdd';
 
 class ManagePage extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3">
-            <Card title="Views" subTitle="2013" />
-          </div>
-          <div className="col-md-3">
-            <Card title="Views" subTitle="2013" />
-          </div>
-          <div className="col-md-3">
-            <Card title="Views" subTitle="2013" />
-          </div>
-          <div className="col-md-3">
-            <Card title="Views" subTitle="2013" />
-          </div>
-          <div className="col-md-3">
-            <Card title="Views" subTitle="2013" />
-          </div>
-        </div>
+      <div>
+        <Route exact path="/manage/" component={ManagePageMain} />
+        <Route exact path="/manage/:artistId" component={ManagePageArtist} />
+        <Route exact path="/manage/:artistId/edit" component={ManagePageArtistEdit} />
+        <Route exact path="/manage/artist/add" component={ManagePageArtistAdd} />
       </div>
     );
   }

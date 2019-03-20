@@ -12,7 +12,7 @@ export async function getAlbums(dispatch) {
       payload: response.data,
     });
   } catch (err) {
-    const message = err.message === 'Network Error' ? "Can't load albums" : err.message;
+    const message = err.message === 'Network Error' ? 'Can\'t load albums' : err.message;
 
     dispatch({
       type: GET_ALBUMS_ERROR,
@@ -20,4 +20,3 @@ export async function getAlbums(dispatch) {
     });
   }
 }
-

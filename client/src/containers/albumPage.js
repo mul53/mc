@@ -53,7 +53,7 @@ class AlbumPage extends Component {
   }
 }
 
-const mapStateToProps = function (state) {
+const mapStateToProps = function(state) {
   return {
     albums: state.albumStore.all,
     loading: state.albumStore.loading,
@@ -61,7 +61,7 @@ const mapStateToProps = function (state) {
   };
 };
 
-const mapDispatchToProps = function (dispatch) {
+const mapDispatchToProps = function(dispatch) {
   return {
     getAlbums() {
       return getAlbums(dispatch);

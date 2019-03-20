@@ -18,7 +18,7 @@ const gradientData = [
   'linear-gradient(to right, #00f260, #0575e6)',
   'linear-gradient(to right, #fc4a1a, #f7b733)',
   'linear-gradient(to right, #74ebd5, #acb6e5)',
-  'linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)',
+  'linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)'
 ];
 
 class GradientGenerator {

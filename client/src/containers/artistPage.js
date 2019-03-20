@@ -43,9 +43,9 @@ class ArtistPage extends Component {
     return (
       <div className="container">
         <div className="row">
-          { artists.map(artist => (
+          { artists.map(({ name, label }) => (
             <div className="col-md-3">
-              <Card title="Views" subTitle="2013" />
+              <Card title={name} subTitle={label} />
             </div>
           )) }
         </div>
@@ -54,7 +54,7 @@ class ArtistPage extends Component {
   }
 }
 
-const mapStateToProps = function (state) {
+const mapStateToProps = function(state) {
   return {
     artists: state.artistStore.all,
     loading: state.artistStore.loading,
@@ -62,10 +62,10 @@ const mapStateToProps = function (state) {
   };
 };
 
-const mapDispatchToProps = function (dispatch) {
+const mapDispatchToProps = function(dispatch) {
   return {
     getArtists() {
-      return getArtists(dispatch);
+      return dispatch(getArtists());
     },
   };
 };
