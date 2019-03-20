@@ -30,6 +30,18 @@ export function getAllAlbums() {
   return axios.get(`${API_BASE_URL}/api/v1/albums`);
 }
 
+export function getAlbum(id) {
+  return axios.get(`${API_BASE_URL}/api/v1/album/${id}`);
+}
+
 export function addAlbum(data) {
   return axios.post(`${API_BASE_URL}/api/v1/album/create`, data);
+}
+
+export function editAlbum(id, data) {
+  return axios.put(`${API_BASE_URL}/api/v1/album/update/${id}`, data);
+}
+
+export function deleteAlbum(id) {
+  return axios.delete(`${API_BASE_URL}/api/v1/album/delete/${id}`);
 }

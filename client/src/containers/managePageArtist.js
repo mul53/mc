@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 import GradPic from '../components/gradPic';
+import Card from '../components/card';
 import { blueButton, redButton } from '../util/styles';
 import { getArtist as getArtistAction, deleteArtist as deleteArtistAction } from '../actions/artistActions';
 
@@ -61,6 +62,18 @@ class ManagePageArtist extends Component {
               <Button className={classes.redButton} onClick={this.handleDelete}>Delete Artist</Button>
             </div>
           </header>
+
+          <div className="manage-artist__albums">
+              <div className="row">
+                { artist.albums && artist.albums.map(({ title, year, _id }) => (
+                  <div key={_id} className="col-md-3">
+                  <Link to={`/manage/album/${_id}`}>
+                    <Card title={title} subTitle={year} />
+                  </Link>
+                  </div>
+                )) } 
+              </div>
+          </div>
         </div>
       </div>
     );
