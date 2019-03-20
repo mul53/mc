@@ -2,10 +2,10 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const styles = theme => ({
+const styles = () => ({
   progress: {
     marginBottom: '8px',
-    color: '#d22f2f'
+    color: '#d22f2f',
   },
 });
 
@@ -19,13 +19,14 @@ function Loader(props) {
       alignItems: 'center',
       flexDirection: 'column',
       fontWeight: '500',
-    }}>
-      <CircularProgress 
+    }}
+    >
+      <CircularProgress
         className={classes.progress}
-        />
+      />
       Loading
     </div>
   );
 }
 
-export default withStyles(styles)(Loader)
+export default withStyles(styles)(Loader);

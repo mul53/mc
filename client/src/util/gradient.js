@@ -1,4 +1,4 @@
-var gradientData = [
+const gradientData = [
   'linear-gradient(to right, #C06C84, #6C5B7B, #355C7D)',
   'linear-gradient(to right, #bc4e9c, #f80759)',
   'linear-gradient(to right, #40e0d0, #ff8c00, #ff0080)',
@@ -18,7 +18,7 @@ var gradientData = [
   'linear-gradient(to right, #00f260, #0575e6)',
   'linear-gradient(to right, #fc4a1a, #f7b733)',
   'linear-gradient(to right, #74ebd5, #acb6e5)',
-  'linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)'
+  'linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)',
 ];
 
 class GradientGenerator {

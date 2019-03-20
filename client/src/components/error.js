@@ -3,7 +3,6 @@ import { Icon } from '@mdi/react';
 import { mdiAccessPointNetworkOff } from '@mdi/js';
 
 function ErrorView({ message }) {
-
   return (
     <div style={{
       height: '100%',
@@ -12,19 +11,20 @@ function ErrorView({ message }) {
       alignItems: 'center',
       flexDirection: 'column',
       fontWeight: '500',
-      color: '#686868'
-    }}>
-      <Icon 
+      color: '#686868',
+    }}
+    >
+      <Icon
         path={mdiAccessPointNetworkOff}
         size={1.5}
         style={{
-          marginBottom: '8px'
+          marginBottom: '8px',
         }}
-        color='#686868'
+        color="#686868"
       />
       { message }
     </div>
-  )
+  );
 }
 
 export default ErrorView;

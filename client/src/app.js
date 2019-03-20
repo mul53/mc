@@ -6,16 +6,17 @@ import Main from './containers/main';
 class App extends Component {
   render() {
     return (
-      <div 
-        style={{ 
+      <div
+        style={{
           display: 'flex',
           height: '100%',
-          overflow: 'hidden'
-        }}>
-          <LeftSidebar />
-          <Main />
+          overflow: 'hidden',
+        }}
+      >
+        <LeftSidebar />
+        <Main />
       </div>
-    )
+    );
   }
 }
 

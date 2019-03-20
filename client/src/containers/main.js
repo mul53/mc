@@ -9,7 +9,7 @@ class Main extends Component {
         <TopNav />
         <Content />
       </div>
-    )
+    );
   }
 }
 

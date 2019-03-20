@@ -8,23 +8,23 @@ class ManagePage extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-3">
-            <Card title="Views" subTitle="2013"/>
+            <Card title="Views" subTitle="2013" />
           </div>
           <div className="col-md-3">
-            <Card title="Views" subTitle="2013"/>
+            <Card title="Views" subTitle="2013" />
           </div>
           <div className="col-md-3">
-            <Card title="Views" subTitle="2013"/>
+            <Card title="Views" subTitle="2013" />
           </div>
           <div className="col-md-3">
-            <Card title="Views" subTitle="2013"/>
+            <Card title="Views" subTitle="2013" />
           </div>
           <div className="col-md-3">
-            <Card title="Views" subTitle="2013"/>
+            <Card title="Views" subTitle="2013" />
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

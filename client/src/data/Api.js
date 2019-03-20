@@ -9,5 +9,3 @@ export function getAllArtists() {
 export function getAllAlbums() {
   return axios.get(`${API_BASE_URL}/api/v1/albums`);
 }
-
-

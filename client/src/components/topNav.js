@@ -9,13 +9,13 @@ class TopNav extends Component {
       <section className="top-nav">
         <div className="top-nav__container top-nav__container--align-center">
           <div className="top-nav__search">
-            <Icon 
+            <Icon
               className="top-nav__search__icon"
               path={mdiMagnify}
               size={1.45}
-              color="white">
-            </Icon>
-            <input type="text" className="top-nav__search__input" placeholder="Search music"/>
+              color="white"
+            />
+            <input type="text" className="top-nav__search__input" placeholder="Search music" />
           </div>
         </div>
         <div className="top-nav__container">
@@ -32,7 +32,7 @@ class TopNav extends Component {
           </nav>
         </div>
       </section>
-    )
+    );
   }
 }
 

@@ -9,7 +9,9 @@ function NoMatch({ location }) {
   return (
     <div>
       <h3>
-        No match for <code>{location.pathname}</code>
+        No match for
+        {' '}
+        <code>{location.pathname}</code>
       </h3>
     </div>
   );
@@ -22,16 +24,17 @@ class Content extends Component {
         overflowY: 'auto',
         paddingTop: '30px',
         height: '100%',
-      }}>
+      }}
+      >
         <Switch>
           <Route path="/" exact component={ArtistPage} />
-          <Route path='/artists' component={ArtistPage} />
-          <Route path='/albums' component={AlbumPage} />
-          <Route path='/manage' component={ManagePage} />
+          <Route path="/artists" component={ArtistPage} />
+          <Route path="/albums" component={AlbumPage} />
+          <Route path="/manage" component={ManagePage} />
           <Route component={NoMatch} />
         </Switch>
       </div>
-    )
+    );
   }
 }
 
