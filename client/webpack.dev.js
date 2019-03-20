@@ -18,7 +18,7 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
   ],
   module: {
     rules: [
@@ -39,7 +39,7 @@ module.exports = {
           'style-loader',
           'css-loader',
           'postcss-loader',
-          'sass-loader'
+          'sass-loader',
         ],
       },
       {
@@ -47,7 +47,7 @@ module.exports = {
         use: {
           loader: 'url-loader',
         },
-      }
+      },
     ],
   },
   output: {

@@ -2,9 +2,9 @@ import React from 'react';
 
 import gg from '../util/gradient';
 
-function Card({ title, subTitle }) {
+function Card({ title, subTitle, styles }) {
   return (
-    <div className="card">
+    <div className="card" style={{ ...styles }}>
       <div className="card__bg" style={{ background: `${gg.generateGradient()}` }} />
       <div className="card__content">
         <div className="card__content__title">

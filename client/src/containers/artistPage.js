@@ -54,7 +54,7 @@ class ArtistPage extends Component {
   }
 }
 
-const mapStateToProps = function(state) {
+const mapStateToProps = function (state) {
   return {
     artists: state.artistStore.all,
     loading: state.artistStore.loading,
@@ -62,7 +62,7 @@ const mapStateToProps = function(state) {
   };
 };
 
-const mapDispatchToProps = function(dispatch) {
+const mapDispatchToProps = function (dispatch) {
   return {
     getArtists() {
       return dispatch(getArtists());

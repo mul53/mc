@@ -1,5 +1,9 @@
-import { getAllAlbums, addAlbum as addAlbumApi, getAlbum as getAlbumApi, editAlbum as editAlbumApi, deleteAlbum as deleteAlbumApi } from '../data/Api';
-import { GET_ALBUMS, GET_ALBUMS_SUCCESS, GET_ALBUMS_ERROR, ADD_ALBUM, ADD_ALBUM_ERROR, ADD_ALBUM_SUCCESS, GET_ALBUM, GET_ALBUM_ERROR, GET_ALBUM_SUCCESS, DELETE_ALBUM, DELETE_ALBUM_ERROR, DELETE_ALBUM_SUCCESS, EDIT_ALBUM, EDIT_ALBUM_ERROR, EDIT_ALBUM_SUCCESS } from '../actionTypes/albumActionTypes';
+import {
+  getAllAlbums, addAlbum as addAlbumApi, getAlbum as getAlbumApi, editAlbum as editAlbumApi, deleteAlbum as deleteAlbumApi,
+} from '../data/Api';
+import {
+  GET_ALBUMS, GET_ALBUMS_SUCCESS, GET_ALBUMS_ERROR, ADD_ALBUM, ADD_ALBUM_ERROR, ADD_ALBUM_SUCCESS, GET_ALBUM, GET_ALBUM_ERROR, GET_ALBUM_SUCCESS, DELETE_ALBUM, DELETE_ALBUM_ERROR, DELETE_ALBUM_SUCCESS, EDIT_ALBUM, EDIT_ALBUM_ERROR, EDIT_ALBUM_SUCCESS,
+} from '../actionTypes/albumActionTypes';
 
 export async function getAlbums(dispatch) {
   try {
@@ -21,7 +25,7 @@ export async function getAlbums(dispatch) {
   }
 }
 
-export const addAlbum = (history, data) => async(dispatch) => {
+export const addAlbum = (history, data) => async (dispatch) => {
   try {
     dispatch({ type: ADD_ALBUM });
 
@@ -37,7 +41,7 @@ export const addAlbum = (history, data) => async(dispatch) => {
   }
 };
 
-export const getAlbum = id => async(dispatch) => {
+export const getAlbum = id => async (dispatch) => {
   try {
     dispatch({ type: GET_ALBUM });
 
@@ -53,7 +57,7 @@ export const getAlbum = id => async(dispatch) => {
   }
 };
 
-export const editAlbum = (history, id, data) => async(dispatch) => {
+export const editAlbum = (history, id, data) => async (dispatch) => {
   try {
     dispatch({ type: EDIT_ALBUM });
 
@@ -71,7 +75,7 @@ export const editAlbum = (history, id, data) => async(dispatch) => {
   }
 };
 
-export const deleteAlbum = (history, id) => async(dispatch) => {
+export const deleteAlbum = (history, id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_ALBUM });
 

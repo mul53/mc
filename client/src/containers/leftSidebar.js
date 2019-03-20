@@ -4,7 +4,7 @@ import {
   mdiPlayCircle,
   mdiBookmarkMusic,
   mdiAccount,
-  mdiRadioTower
+  mdiRadioTower,
 } from '@mdi/js';
 import { Link } from 'react-router-dom';
 

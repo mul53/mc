@@ -30,11 +30,11 @@ class ManagePageMain extends Component {
               </Button>
             </Link>
           </div>
-          <div className="row">
+          <div className="row" style={{ marginTop: '40px' }}>
             { artists.map(({ name, label, _id }) => (
               <div className="col-md-3">
                 <Link to={`/manage/${_id}`}>
-                  <Card title={name} subTitle={label} />
+                  <Card styles={{ margin: '0px' }} title={name} subTitle={label} />
                 </Link>
               </div>
             ))}

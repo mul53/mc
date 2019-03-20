@@ -46,7 +46,7 @@ class ManagePageAlbum extends Component {
                   <span>
                     <span className="name">{ album.title }</span>
                     <br />
-                    <br/>
+                    <br />
                     { album.year }
                   </span>
                 )}

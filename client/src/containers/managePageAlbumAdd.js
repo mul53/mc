@@ -5,7 +5,7 @@ import {
   FormControl,
   InputLabel,
   Input,
-  Button
+  Button,
 } from '@material-ui/core';
 
 import { blueButton, whiteInput } from '../util/styles';
@@ -32,7 +32,7 @@ class ManagePageAlbumAdd extends Component {
 
   handleSubmit() {
     const { title, year } = this.state;
-    const { history, match} = this.props;
+    const { history, match } = this.props;
     const { artistId } = match.params;
     this.props.addAlbum(history, { title, year, artist: artistId });
   }

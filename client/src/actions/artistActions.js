@@ -1,5 +1,5 @@
 import {
-  getAllArtists, addArtist as addArtistApi, getArtist as getArtistApi, editArtist as editArtistApi, deleteArtist as deleteArtistApi
+  getAllArtists, addArtist as addArtistApi, getArtist as getArtistApi, editArtist as editArtistApi, deleteArtist as deleteArtistApi,
 } from '../data/Api';
 import {
   GET_ARTISTS,
@@ -15,10 +15,10 @@ import {
   EDIT_ARTIST_SUCCESS,
   DELETE_ARTIST,
   DELETE_ARTIST_ERROR,
-  DELETE_ARTIST_SUCCESS
+  DELETE_ARTIST_SUCCESS,
 } from '../actionTypes/artistActionTypes';
 
-export const getArtists = () => async(dispatch) => {
+export const getArtists = () => async (dispatch) => {
   try {
     dispatch({ type: GET_ARTISTS });
 
@@ -32,7 +32,7 @@ export const getArtists = () => async(dispatch) => {
   }
 };
 
-export const addArtist = (history, data) => async(dispatch) => {
+export const addArtist = (history, data) => async (dispatch) => {
   try {
     dispatch({ type: ADD_ARTIST });
 
@@ -48,7 +48,7 @@ export const addArtist = (history, data) => async(dispatch) => {
   }
 };
 
-export const getArtist = id => async(dispatch) => {
+export const getArtist = id => async (dispatch) => {
   try {
     dispatch({ type: GET_ARTIST });
 
@@ -64,7 +64,7 @@ export const getArtist = id => async(dispatch) => {
   }
 };
 
-export const editArtist = (history, id, data) => async(dispatch) => {
+export const editArtist = (history, id, data) => async (dispatch) => {
   try {
     dispatch({ type: EDIT_ARTIST });
 
@@ -82,7 +82,7 @@ export const editArtist = (history, id, data) => async(dispatch) => {
   }
 };
 
-export const deleteArtist = (history, id) => async(dispatch) => {
+export const deleteArtist = (history, id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_ARTIST });
 

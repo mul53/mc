@@ -64,15 +64,15 @@ class ManagePageArtist extends Component {
           </header>
 
           <div className="manage-artist__albums">
-              <div className="row">
-                { artist.albums && artist.albums.map(({ title, year, _id }) => (
-                  <div key={_id} className="col-md-3">
+            <div className="row">
+              { artist.albums && artist.albums.map(({ title, year, _id }) => (
+                <div key={_id} className="col-md-3">
                   <Link to={`/manage/album/${_id}`}>
-                    <Card title={title} subTitle={year} />
+                    <Card styles={{ margin: '0px' }} title={title} subTitle={year} />
                   </Link>
-                  </div>
-                )) } 
-              </div>
+                </div>
+              )) }
+            </div>
           </div>
         </div>
       </div>
