@@ -20,7 +20,8 @@ class Content extends Component {
     return (
       <div style={{
         overflowY: 'auto',
-        paddingTop: '30px'
+        paddingTop: '30px',
+        height: '100%',
       }}>
         <Switch>
           <Route path="/" exact component={ArtistPage} />

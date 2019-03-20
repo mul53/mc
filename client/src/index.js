@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import './static/styles/main.scss';
 import App from './app';
-
-const history = location.h;
+import store from './createStore'; 
 
 ReactDOM.render(
-<Router>
-  <App />
-</Router>,
+<Provider store={store}>
+  <Router>
+    <App />
+  </Router>
+</Provider>,
   document.getElementById('root')
 );
