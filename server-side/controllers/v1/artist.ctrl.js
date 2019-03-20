@@ -18,7 +18,17 @@ var ArtistCtrl = {
       if (err) {
         res.send(err);
       }
-      res.status(200).json(artist);
+      Album.find({artist: artist._id}, function(err, albums) {
+        if (err) {
+          res.send(err);
+        }
+        artist.albums = albums;
+
+        res.status(200).json({
+          ...artist._doc,
+          albums: albums,
+        });
+      });
     });
   },
 
