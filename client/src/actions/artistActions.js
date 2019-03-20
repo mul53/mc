@@ -1,5 +1,6 @@
 import {
- getAllArtists, addArtist as addArtistApi, getArtist as getArtistApi, editArtist as editArtistApi, deleteArtist as deleteArtistApi } from '../data/Api';
+  getAllArtists, addArtist as addArtistApi, getArtist as getArtistApi, editArtist as editArtistApi, deleteArtist as deleteArtistApi
+} from '../data/Api';
 import {
   GET_ARTISTS,
   GET_ARTISTS_SUCCESS,

@@ -1,3 +1,7 @@
 export const GET_ALBUMS = 'GET_ALBUMS';
 export const GET_ALBUMS_SUCCESS = 'GET_ALBUMS_SUCCESS';
 export const GET_ALBUMS_ERROR = 'GET_ALBUMS_ERROR';
+
+export const ADD_ALBUM = 'ADD_ALBUM';
+export const ADD_ALBUM_SUCCESS = 'ADD_ALBUM_SUCCESS';
+export const ADD_ALBUM_ERROR = 'ADD_ALBUM_ERROR';

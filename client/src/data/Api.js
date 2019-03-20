@@ -29,3 +29,7 @@ export function deleteArtist(id) {
 export function getAllAlbums() {
   return axios.get(`${API_BASE_URL}/api/v1/albums`);
 }
+
+export function addAlbum(data) {
+  return axios.post(`${API_BASE_URL}/api/v1/album/create`, data);
+}

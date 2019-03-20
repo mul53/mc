@@ -5,6 +5,7 @@ import ManagePageMain from './managePageMain';
 import ManagePageArtist from './managePageArtist';
 import ManagePageArtistEdit from './managePageArtistEdit';
 import ManagePageArtistAdd from './managePageArtistAdd';
+import ManagePageAlbumAdd from './managePageAlbumAdd';
 
 class ManagePage extends Component {
   render() {
@@ -13,6 +14,7 @@ class ManagePage extends Component {
         <Route exact path="/manage/" component={ManagePageMain} />
         <Route exact path="/manage/:artistId" component={ManagePageArtist} />
         <Route exact path="/manage/:artistId/edit" component={ManagePageArtistEdit} />
+        <Route exact path="/manage/:artistId/album/add" component={ManagePageAlbumAdd} />
         <Route exact path="/manage/artist/add" component={ManagePageArtistAdd} />
       </div>
     );

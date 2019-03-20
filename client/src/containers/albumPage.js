@@ -42,9 +42,9 @@ class AlbumPage extends Component {
     return (
       <div className="container">
         <div className="row">
-          { albums.map(album => (
-            <div className="col-md-3">
-              <Card title="Views" subTitle="2013" />
+          { albums.map(({ title, year, _id }) => (
+            <div key={_id} className="col-md-3">
+              <Card title={title} subTitle={year} />
             </div>
           )) }
         </div>

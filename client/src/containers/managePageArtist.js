@@ -52,10 +52,13 @@ class ManagePageArtist extends Component {
               </section>
             </div>
             <div className="manage-artist__header__right">
-              <Link to={`/manage/${artistId}/edit`}>
-                <Button className={classes.blueButton}>Edit</Button>
+              <Link to={`/manage/${artistId}/album/add`}>
+                <Button className={classes.blueButton}>Add Album</Button>
               </Link>
-              <Button className={classes.redButton} onClick={this.handleDelete}>Delete</Button>
+              <Link to={`/manage/${artistId}/edit`}>
+                <Button className={classes.blueButton}>Edit Artist</Button>
+              </Link>
+              <Button className={classes.redButton} onClick={this.handleDelete}>Delete Artist</Button>
             </div>
           </header>
         </div>
