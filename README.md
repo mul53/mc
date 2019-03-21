@@ -1,100 +1,68 @@
+## MUSANGA  CHALLENGE
 
-MUSANGA LOGISTICS CHALLENGE
------
+## Getting Started
 
-Table of Contents
------------------
+### Set up MongoDB
+Install MongoDB onto your computer, 
+If you have installed mongodb and still seeing errors in the output. Try checking the db config in `server-side/services/db.js`
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-- [Challenge](#Challenge)
-    - [Server-side](#Server-side)
-    - [Client-side](#client-side)
+### Install Dependencies
+Install the client-side dependencies, by running the following commands.
 
-
-Prerequisites
------
-1. Knowledge of the Javascript (Node JS), Express JS and MongoDB and React JS or Angular JS.
-2. knowledge on client - Server paradigm
-3. Text editor  [Visual Code](https://code.visualstudio.com/) is highly recommended.
-
-Getting Started
----------------
-
-The easiest way to get started is to clone the repository:
-
-```bash
-# Get the latest snapshot
-git clone https://github.com/
-
-# Change directory into client app and
-cd client 
-
-# Install NPM dependencies
-yarn install
-
-# Then simply start your app in development with nodemon
-yarn start
-
-
-# Change directory into client app and
-cd server
-
-# Install NPM dependencies
-yarn install
-
-# Then simply start your app in development with nodemon
-yarn start
+```
+cd client
 ```
 
-**Note:** For the server side we recommend you install [Nodemon](https://github.com/remy/nodemon).Nodemon watches for any changes in your  node.js app and automatically restarts the
-server.
+```
+yarn
+```
+
+Install the server-side dependencies, by running the following commands.
+
+```
+cd server-side
+```
+
+```
+yarn
+```
+
+### Start local development env
+Start the backend server then the client
 
 
+## Server-Side
+In Server-Side Root directory
 
+### Run Server-Side tests
 
-Challenge
----
-### Server-side
-Create an express JS server that stores information on artist and their albums. The server should have the following APIs.
+```
+yarn run app:test
+```
 
+### Run Server-Side linter
 
+```
+yarn run app:lint
+```
 
+### Run Server-Side App 
 
-| API                               | Description                                                  |
-| ---------------------------------- | ------------------------------------------------------------ |
-- [x] |/api/v1/artists/| return a list of all artists. |
-- [x] |/api/v1/albums/| return a list of all albums|
-- [x] |/api/v1/artists/search/[QUERY]| return a list of all artists fitting the query term |
-- [x] |/api/v1/albums/search/[QUERY]| return a list of all albums|
-- [x] |api/v1/album/create/|creates and stores an album in the mongodb database|
-- [x] |api/v1/artist/create/|creates and stores an artist in the mongodb database|
-- [x] |api/v1/album/delete/[ID]|deletes album in the mongodb database based on the id|
-- [x] |api/v1/artist/delete/[ID]|deletes artist in the mongodb database based on the id (including their albums)|
-- [] |api/v1/album/update/[ID]|updates album in the mongodb database based on the id|
-- [x] |api/v1/artist/updates/[ID]|updates artist in the mongodb database based on the id|
+```
+yarn run app:start
+```
 
-To test these APIs we recommend using [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/)
+## Client-Side
+In Client directory
 
-Client-Side
------
-In the client folder, create a react application that connects to the API Server.  The application should have the following:
+### Run Client-Side linter
 
-1. A page showing all the artists.
-2. A page showing all the albums by an artist.
-3. A page showing all the songs in an album.
-4. A page that allows the user  to search for an artist.
-5. A page to manage artists and their albums. This page should allow one to delete and update each artist and album information.  
+```
+yarn run start:lint
+```
 
-**Bonus**: For bonus points use the following libraries.
+### Run Client-Side App
 
-1. Bootstrap for styling
-
-2. React-router for routing 
-
-3. Redux for state management.
-
-
-Goodluck and if you have any questions please reach out to one of the following email:
-daniel.schmitt@musanga.com / mbmakayi@musanga.com
+```
+yarn run start:dev
+```

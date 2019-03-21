@@ -10,7 +10,7 @@ var app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-// app.use(cors());
+app.use(cors());
 
 app.use('/api/v1', apiV1Router);
 

@@ -4,7 +4,7 @@
   "description": "MUSANGA LOGISTICS CHALLENGE -----",
   "main": "index.js",
   "scripts": {
-    "deploy": ""
+    "start": "concurrently --names \"CLIENT, SERVER\" --kill-others \"yarn --cwd client run start:dev\" \"yarn --cwd server-side run app:start\" "
   },
   "repository": {
     "type": "git",
@@ -13,5 +13,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/Makayi/musanga-challenge#readme"
+  "homepage": "https://bitbucket.org/Makayi/musanga-challenge#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
 }
