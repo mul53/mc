@@ -1,0 +1,17 @@
+{
+  "name": "musanga-challenge",
+  "version": "1.0.0",
+  "description": "MUSANGA LOGISTICS CHALLENGE -----",
+  "main": "index.js",
+  "scripts": {
+    "deploy": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/Makayi/musanga-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Makayi/musanga-challenge#readme"
+}

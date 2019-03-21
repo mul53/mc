@@ -46,9 +46,9 @@ class AlbumPage extends Component {
         <div className="row">
           { albums.map(({ title, year, _id }) => (
             <Link to={`/manage/album/${_id}`}>
-                <div key={_id} className="col-md-3">
-                  <Card title={title} subTitle={year} />
-                </div>
+              <div key={_id} className="col-md-3">
+                <Card title={title} subTitle={year} />
+              </div>
             </Link>
           )) }
         </div>

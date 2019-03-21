@@ -64,10 +64,10 @@ class ArtistPage extends Component {
       <div className="container">
         <div className="row">
           { artists && artists.map(({ name, label, _id }) => (
-            <Link to={`/manage/${_id}`} >
-            <div key={_id} className="col-md-3">
-              <Card title={name} subTitle={label} />
-            </div>
+            <Link to={`/manage/${_id}`}>
+              <div key={_id} className="col-md-3">
+                <Card title={name} subTitle={label} />
+              </div>
             </Link>
           )) }
         </div>

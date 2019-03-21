@@ -28,7 +28,7 @@ class TopNav extends Component {
     if (e.key === 'Enter') {
       if (/^\/artists/.test(currentPath)) {
         push(`/artists?name=${encodeParam(search)}`);
-      };
+      }
     }
   }
 
