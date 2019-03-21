@@ -12,6 +12,10 @@ export function getArtist(id) {
   return axios.get(`${API_BASE_URL}/api/v1/artist/${id}`);
 }
 
+export function searchArtists(query) {
+  return axios.get(`${API_BASE_URL}/api/v1/artists/search/${query}`);
+}
+
 export function addArtist(data) {
   return axios.post(`${API_BASE_URL}/api/v1/artist/create`, data);
 }

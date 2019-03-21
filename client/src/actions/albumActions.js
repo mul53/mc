@@ -5,7 +5,7 @@ import {
   GET_ALBUMS, GET_ALBUMS_SUCCESS, GET_ALBUMS_ERROR, ADD_ALBUM, ADD_ALBUM_ERROR, ADD_ALBUM_SUCCESS, GET_ALBUM, GET_ALBUM_ERROR, GET_ALBUM_SUCCESS, DELETE_ALBUM, DELETE_ALBUM_ERROR, DELETE_ALBUM_SUCCESS, EDIT_ALBUM, EDIT_ALBUM_ERROR, EDIT_ALBUM_SUCCESS,
 } from '../actionTypes/albumActionTypes';
 
-export async function getAlbums(dispatch) {
+export const getAlbums = () => async (dispatch) => {
   try {
     dispatch({ type: GET_ALBUMS });
 
@@ -23,7 +23,7 @@ export async function getAlbums(dispatch) {
       payload: message,
     });
   }
-}
+};
 
 export const addAlbum = (history, data) => async (dispatch) => {
   try {

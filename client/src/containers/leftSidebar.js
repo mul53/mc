@@ -30,7 +30,7 @@ class LeftSidebar extends Component {
         </div>
 
         <nav className="left-sidebar__menu">
-          <Link to="/artists" className="left-sidebar__menu__item">
+          <Link to="/artists" className="left-sidebar__menu__item left-sidebar__menu__item--active">
             <Icon
               className="icon"
               path={mdiPlayCircle}

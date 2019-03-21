@@ -56,6 +56,13 @@
       align-items: center;
       color: white;
 
+      &--active {
+        background-color: $black-500;
+        border-left: 3px solid $red;
+        text-decoration: none;
+        color: white;
+      }
+
       
       >.icon {
         padding-right: 8px;

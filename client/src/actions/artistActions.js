@@ -1,5 +1,10 @@
 import {
-  getAllArtists, addArtist as addArtistApi, getArtist as getArtistApi, editArtist as editArtistApi, deleteArtist as deleteArtistApi,
+  getAllArtists,
+  addArtist as addArtistApi,
+  getArtist as getArtistApi,
+  editArtist as editArtistApi,
+  deleteArtist as deleteArtistApi,
+  searchArtists as searchArtistsApi,
 } from '../data/Api';
 import {
   GET_ARTISTS,
@@ -16,7 +21,24 @@ import {
   DELETE_ARTIST,
   DELETE_ARTIST_ERROR,
   DELETE_ARTIST_SUCCESS,
+  SEARCH_ARTIST,
+  SEARCH_ARTIST_ERROR,
+  SEARCH_ARTIST_SUCCESS,
 } from '../actionTypes/artistActionTypes';
+
+export const searchArtists = query => async (dispatch) => {
+  try {
+    dispatch({ type: SEARCH_ARTIST });
+
+    const response = await searchArtistsApi(query);
+
+    dispatch({ type: SEARCH_ARTIST_SUCCESS, payload: response.data });
+  } catch (err) {
+    const message = err.message === 'Network Error' ? 'Can\'t find artists' : err.message;
+
+    dispatch({ type: SEARCH_ARTIST_ERROR, payload: message });
+  }
+};
 
 export const getArtists = () => async (dispatch) => {
   try {
